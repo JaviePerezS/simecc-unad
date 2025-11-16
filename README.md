@@ -16,6 +16,9 @@ Fue desarrollado con **Spring Boot 3**, **Java 17**, **JPA/Hibernate** y **H2 en
 - **PostgreSQL** (modo producción)
 - **Lombok**
 - **Maven**
+- **Nodejs 20.19**
+- **Angular**
+
 
 ---
 
