@@ -1,12 +1,14 @@
 package com.simecc.backend.service.impl;
 
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
 import com.simecc.backend.entity.Actividad;
 import com.simecc.backend.repository.ActividadRepository;
 import com.simecc.backend.service.ActividadService;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
 
-import java.util.List;
+import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor

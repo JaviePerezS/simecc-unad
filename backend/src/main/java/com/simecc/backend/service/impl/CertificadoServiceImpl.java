@@ -1,12 +1,14 @@
 package com.simecc.backend.service.impl;
 
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
 import com.simecc.backend.entity.Certificado;
 import com.simecc.backend.repository.CertificadoRepository;
 import com.simecc.backend.service.CertificadoService;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
 
-import java.util.List;
+import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor

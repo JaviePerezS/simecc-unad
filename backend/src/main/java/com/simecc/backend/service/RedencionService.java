@@ -1,7 +1,8 @@
 package com.simecc.backend.service;
 
-import com.simecc.backend.entity.Redencion;
 import java.util.List;
+
+import com.simecc.backend.entity.Redencion;
 
 public interface RedencionService {
 

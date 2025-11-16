@@ -1,7 +1,8 @@
 package com.simecc.backend.service;
 
-import com.simecc.backend.entity.Multa;
 import java.util.List;
+
+import com.simecc.backend.entity.Multa;
 
 public interface MultaService {
 

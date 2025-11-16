@@ -1,7 +1,8 @@
 package com.simecc.backend.repository;
 
-import com.simecc.backend.entity.Rol;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.simecc.backend.entity.Rol;
 
 public interface RolRepository extends JpaRepository<Rol, Long> {
 }

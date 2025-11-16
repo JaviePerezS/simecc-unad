@@ -1,7 +1,8 @@
 package com.simecc.backend.service;
 
-import com.simecc.backend.entity.Actividad;
 import java.util.List;
+
+import com.simecc.backend.entity.Actividad;
 
 public interface ActividadService {
 
