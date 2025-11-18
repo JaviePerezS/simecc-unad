@@ -3,7 +3,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { MultasComponent } from './pages/multas/multas.component';
 
-export const adminRoutes: Routes = [
+// CORRECCIÓN: Se renombra a ADMIN_ROUTES (MAYÚSCULAS) para consistencia con AUTH_ROUTES.
+export const ADMIN_ROUTES: Routes = [
   {
     path: '',
     children: [

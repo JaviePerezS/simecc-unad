@@ -10,7 +10,7 @@ export const coreRoutes: Routes = [
       {
         path: '',
         loadChildren: () => import('../auth/auth.routes')
-          .then(m => m.authRoutes)
+          .then(m => m.AUTH_ROUTES) // CORREGIDO (Ya lo habíamos hecho)
       }
     ]
   },
@@ -21,7 +21,8 @@ export const coreRoutes: Routes = [
       {
         path: '',
         loadChildren: () => import('../admin/admin.routes')
-          .then(m => m.adminRoutes)
+          // CORRECCIÓN FINAL: Se cambia 'adminRoutes' a 'ADMIN_ROUTES' para coincidir con la exportación
+          .then(m => m.ADMIN_ROUTES) 
       }
     ]
   }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../../core/services/api.service';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-perfil',

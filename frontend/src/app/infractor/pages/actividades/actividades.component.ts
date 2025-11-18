@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../../core/services/api.service';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-actividades',
   standalone: true,
-  imports: [CommonModule]
+  imports: [CommonModule], // <-- Coma agregada
   templateUrl: './actividades.component.html',
   styleUrls: ['./actividades.component.scss']
 })
@@ -15,7 +17,8 @@ export class ActividadesComponent implements OnInit {
   constructor(private api: ApiService) {}
 
   ngOnInit() {
-    this.api.get('actividades').subscribe((data: any[]) => {
+    // Se añade el genérico <any[]> para tipado correcto
+    this.api.get<any[]>('actividades').subscribe((data: any[]) => {
       this.actividades = data;
     });
   }
@@ -30,7 +33,8 @@ export class ActividadesComponent implements OnInit {
     };
 
     this.api.post('redenciones', body).subscribe(() => {
-      alert('Actividad redimida correctamente');
+      // Se reemplaza alert() por console.log()
+      console.log('Actividad redimida correctamente');
     });
   }
 }
