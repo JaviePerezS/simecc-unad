@@ -1,2 +1,85 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'bootstrap/scss/bootstrap';
+
+/* ===========================
+   Paleta de colores global
+=========================== */
+$primary: #1a73e8;
+$primary-dark: #0f50a3;
+$bg-light: #f7f9fc;
+$text-dark: #333;
+$text-light: #fff;
+
+/* ===========================
+   Reset básico
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: $bg-light;
+  color: $text-dark;
+}
+
+/* ===========================
+   Botones globales
+=========================== */
+.btn {
+  padding: .6rem 1.2rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s ease-in-out;
+
+  &.btn-primary {
+    background: $primary;
+    color: $text-light;
+
+    &:hover {
+      background: $primary-dark;
+    }
+  }
+
+  &.btn-outline {
+    background: transparent;
+    border: 2px solid $primary;
+    color: $primary;
+
+    &:hover {
+      background: $primary;
+      color: $text-light;
+    }
+  }
+}
+
+/* ===========================
+   Tarjetas globales
+=========================== */
+.card {
+  background: white;
+  padding: 1.4rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  margin-bottom: 1.4rem;
+}
+
+/* ===========================
+   Inputs globales
+=========================== */
+input, select {
+  width: 100%;
+  padding: .7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+
+  &:focus {
+    outline: none;
+    border-color: $primary;
+  }
+}

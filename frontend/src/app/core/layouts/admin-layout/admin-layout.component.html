@@ -1,0 +1,28 @@
+<div class="admin-container">
+
+  <!-- Sidebar -->
+  <aside [class.collapsed]="collapsed">
+    <div class="logo">SIMECC</div>
+
+    <nav>
+      <a routerLink="/admin/dashboard" routerLinkActive="active">Dashboard</a>
+      <a routerLink="/admin/usuarios" routerLinkActive="active">Usuarios</a>
+      <a routerLink="/admin/multas" routerLinkActive="active">Multas</a>
+    </nav>
+  </aside>
+
+  <!-- Main -->
+  <main>
+    <header>
+      <button class="btn btn-sm btn-light" (click)="collapsed = !collapsed">
+        ☰
+      </button>
+      <span class="ms-auto">Admin</span>
+    </header>
+
+    <section class="content">
+      <router-outlet></router-outlet>
+    </section>
+  </main>
+
+</div>

@@ -1,0 +1,17 @@
+<h2>Mis Redenciones</h2>
+
+<table class="table ">
+  <thead>
+    <tr>
+      <th>Actividad</th>
+      <th>Fecha</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let r of redenciones">
+      <td>{{ r.actividad?.nombre }}</td>
+      <td>{{ r.fecha }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,23 @@
+<h2>Certificados</h2>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Redención</th>
+      <th>Fecha</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let c of certificados">
+      <td>{{ c.redencion?.actividad?.nombre }}</td>
+      <td>{{ c.fechaEmision }}</td>
+      <td>
+        <a [href]="c.url" target="_blank" class="btn btn-primary btn-sm">
+          Ver Certificado
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>

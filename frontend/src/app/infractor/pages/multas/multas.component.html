@@ -1,0 +1,19 @@
+<h2>Mis Multas</h2>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Valor</th>
+      <th>Fecha</th>
+      <th>Descripción</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let m of multas">
+      <td>${{m.valor }}</td>
+      <td>{{ m.fecha }}</td>
+      <td>{{ m.descripcion }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,36 @@
+.home-container {
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    .card {
+      width: 260px;
+      padding: 20px;
+      border-radius: 8px;
+      background: white;
+
+      h3 {
+        color: #002f6c;
+      }
+
+      .btn-primary {
+        display: inline-block;
+        margin-top: 10px;
+        background: #002f6c;
+        padding: 8px 14px;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+}

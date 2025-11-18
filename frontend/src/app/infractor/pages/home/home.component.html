@@ -1,0 +1,25 @@
+<div class="home-container">
+
+  <h2>Bienvenido, {{ usuario?.nombre }}</h2>
+
+  <div class="cards">
+    <div class="card shadow">
+      <h3>Multas Pendientes</h3>
+      <p>Consulta el estado de tus multas y acciones correctivas.</p>
+      <a routerLink="/infractor/multas" class="btn-primary">Ver Multas</a>
+    </div>
+
+    <div class="card shadow">
+      <h3>Actividades Disponibles</h3>
+      <p>Realiza actividades para redimir tus puntos.</p>
+      <a routerLink="/infractor/actividades" class="btn-primary">Ver Actividades</a>
+    </div>
+
+    <div class="card shadow">
+      <h3>Certificados</h3>
+      <p>Accede a los certificados de tus actividades completadas.</p>
+      <a routerLink="/infractor/certificados" class="btn-primary">Ver Certificados</a>
+    </div>
+  </div>
+
+</div>
