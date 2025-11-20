@@ -1,12 +1,13 @@
-.infractor-home {
+.dashboard {
+  margin-left: 260px;
   padding: 30px;
 
-  .subtitle {
-    color: #6c757d;
+  h2 {
     margin-bottom: 20px;
+    color: #212529;
   }
 
-  .grid {
+  .stats-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
@@ -16,17 +17,12 @@
       padding: 20px;
       border-radius: 10px;
       border: 1px solid #dee2e6;
-      cursor: pointer;
-      transition: 0.2s;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 
-      &:hover {
-        border-color: #0d6efd;
-        transform: scale(1.02);
-      }
-
-      h4 {
+      .value {
+        font-size: 32px;
         color: #0d6efd;
-        margin-bottom: 10px;
+        font-weight: 700;
       }
     }
   }

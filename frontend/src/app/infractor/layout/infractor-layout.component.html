@@ -1,0 +1,23 @@
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+      <h2 class="title">SIMECC - Infractor</h2>
+
+      <nav>
+          <a routerLink="/infractor/home" >Inicio</a>
+          <a routerLink="/infractor/actividades">Actividades</a>
+          <a routerLink="/infractor/multas">Multas</a>
+          <a routerLink="/infractor/redenciones">Redenciones</a>
+          <a routerLink="/infractor/certificados">Certificados</a>
+          <a routerLink="/infractor/perfil">Mi Perfil</a>
+
+          <button class="logout-btn" (click)="logout()">Cerrar sesión</button>
+      </nav>
+  </aside>
+
+  <main class="content">
+      <router-outlet></router-outlet>
+  </main>
+
+</div>

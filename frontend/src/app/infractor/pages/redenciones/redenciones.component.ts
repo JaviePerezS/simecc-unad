@@ -1,12 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../../../core/services/api.service';
-import { CommonModule } from '@angular/common';
 
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ApiService } from '../../../core/services/api.service';
 
 @Component({
   selector: 'app-redenciones',
   standalone: true,
-  // CORRECCIÓN: Se añade CommonModule a imports
   imports: [CommonModule],
   templateUrl: './redenciones.component.html',
   styleUrls: ['./redenciones.component.scss']
@@ -20,8 +19,7 @@ export class RedencionesComponent implements OnInit {
   ngOnInit() {
     const user = JSON.parse(localStorage.getItem('user') || '{}');
 
-    // Asumiendo que ya corregimos el ApiService para manejar <any[]> genérico
-    this.api.get<any[]>('redenciones').subscribe((data: any[]) => {
+    this.api.get<any[]>('redenciones').subscribe(data => {
       this.redenciones = data.filter(r => r.usuario?.id === user.id);
     });
   }

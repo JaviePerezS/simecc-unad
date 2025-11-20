@@ -1,14 +1,30 @@
 import { Routes } from '@angular/router';
-import { AUTH_ROUTES } from './auth/auth.routes';
 
 export const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'auth/login',
-    pathMatch: 'full'
-  },
+
+  // AUTH
   {
     path: 'auth',
-    children: AUTH_ROUTES
-  }
+    loadChildren: () =>
+      import('./auth/auth.routes').then(m => m.AUTH_ROUTES)
+  },
+
+  // ADMIN
+  {
+    path: 'admin',
+    loadChildren: () =>
+      import('./admin/admin.routes').then(m => m.ADMIN_ROUTES)
+  },
+  // INFRACTOR
+  {
+    path: 'infractor',
+    loadChildren: () =>
+      import('./infractor/infractor.routes').then(m => m.INFRACTOR_ROUTES)
+  },
+
+  // Redirect inicial
+  { path: '', redirectTo: 'auth/login', pathMatch: 'full' },
+
+  // 404
+  { path: '**', redirectTo: 'auth/login' }
 ];

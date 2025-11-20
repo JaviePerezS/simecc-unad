@@ -1,0 +1,39 @@
+.page-container {
+  padding: 20px;
+}
+
+h2 {
+  color: #0056b3;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th {
+    background: #0056b3;
+    color: white;
+    padding: 10px;
+  }
+
+  td {
+    padding: 10px;
+    border-bottom: 1px solid #eaeaea;
+  }
+}
+
+.btn.detail {
+  background: #17a2b8;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

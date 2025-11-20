@@ -1,25 +1,26 @@
-<div class="home-container">
+<div class="container infractor-home">
+  <h2>Bienvenido al Sistema SIMECC</h2>
+  <p class="subtitle">Consulta tu estado, multas, actividades y más.</p>
 
-  <h2>Bienvenido, {{ usuario?.nombre }}</h2>
-
-  <div class="cards">
-    <div class="card shadow">
-      <h3>Multas Pendientes</h3>
-      <p>Consulta el estado de tus multas y acciones correctivas.</p>
-      <a routerLink="/infractor/multas" class="btn-primary">Ver Multas</a>
+  <div class="grid">
+    <div class="card" routerLink="/infractor/multas">
+      <h4>Mis Multas</h4>
+      <p>Consulta y paga tus multas activas</p>
     </div>
 
-    <div class="card shadow">
-      <h3>Actividades Disponibles</h3>
-      <p>Realiza actividades para redimir tus puntos.</p>
-      <a routerLink="/infractor/actividades" class="btn-primary">Ver Actividades</a>
+    <div class="card" routerLink="/infractor/actividades">
+      <h4>Actividades Asignadas</h4>
+      <p>Tareas pendientes para redención</p>
     </div>
 
-    <div class="card shadow">
-      <h3>Certificados</h3>
-      <p>Accede a los certificados de tus actividades completadas.</p>
-      <a routerLink="/infractor/certificados" class="btn-primary">Ver Certificados</a>
+    <div class="card" routerLink="/infractor/redenciones">
+      <h4>Redenciones</h4>
+      <p>Historial de redención de actividades</p>
+    </div>
+
+    <div class="card" routerLink="/infractor/certificados">
+      <h4>Certificados</h4>
+      <p>Descarga tus certificados generados</p>
     </div>
   </div>
-
 </div>

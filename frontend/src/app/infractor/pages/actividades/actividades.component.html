@@ -1,25 +1,25 @@
-<h2>Actividades Disponibles</h2>
+<div class="container">
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Actividad</th>
-      <th>Puntos</th>
-      <th>Tipo</th>
-      <th></th>
-    </tr>
-  </thead>
+  <h2 class="title">Actividades Disponibles</h2>
 
-  <tbody>
-    <tr *ngFor="let a of actividades">
-      <td>{{ a.nombre }}</td>
-      <td>{{ a.puntos }}</td>
-      <td>{{ a.tipo }}</td>
-      <td>
-        <button class="btn btn-primary btn-sm" (click)="redimir(a.id)">
-          Redimir
-        </button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+  <div class="cards">
+
+    <div class="card" *ngFor="let act of actividades">
+      <h3>{{ act.nombre }}</h3>
+
+      <p class="tipo">
+        <strong>Tipo:</strong> {{ act.tipo }}
+      </p>
+
+      <p class="puntos">
+        <strong>Puntos:</strong> {{ act.puntos }}
+      </p>
+
+      <button (click)="redimir(act.id)" class="btn-redimir">
+        Redimir Actividad
+      </button>
+    </div>
+
+  </div>
+
+</div>

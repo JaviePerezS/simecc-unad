@@ -1,19 +1,28 @@
-<h2>Mis Multas</h2>
+<div class="multas-container">
+  <h2 class="title">Mis Multas</h2>
+  <p class="subtitle">Aquí puedes consultar las multas asociadas a tu documento.</p>
 
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th>Valor</th>
-      <th>Fecha</th>
-      <th>Descripción</th>
-    </tr>
-  </thead>
+  <!-- Si no hay multas -->
+  <div *ngIf="multas.length === 0" class="empty">
+    <p>No tienes multas registradas.</p>
+  </div>
 
-  <tbody>
-    <tr *ngFor="let m of multas">
-      <td>${{m.valor }}</td>
-      <td>{{ m.fecha }}</td>
-      <td>{{ m.descripcion }}</td>
-    </tr>
-  </tbody>
-</table>
+  <!-- Listado de multas -->
+  <table *ngIf="multas.length > 0" class="table">
+    <thead>
+      <tr>
+        <th>Valor</th>
+        <th>Fecha</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let m of multas">
+        <td>${{ m.valor }}</td>
+        <td>{{ m.fecha }}</td>
+        <td>{{ m.descripcion }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

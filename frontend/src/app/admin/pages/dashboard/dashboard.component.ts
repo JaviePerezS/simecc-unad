@@ -9,7 +9,6 @@ import { CommonModule } from '@angular/common';
 })
 export class DashboardComponent {
 
-  // Aquí luego haremos peticiones al backend
   data = {
     totalUsuarios: 32,
     totalMultas: 12,

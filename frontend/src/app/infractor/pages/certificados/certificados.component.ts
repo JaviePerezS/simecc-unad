@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../../../core/services/api.service';
 import { CommonModule } from '@angular/common';
-
+import { ApiService } from '../../../core/services/api.service';
 
 @Component({
   selector: 'app-certificados',
   standalone: true,
-  imports: [CommonModule], // <-- Coma agregada
+  imports: [CommonModule],
   templateUrl: './certificados.component.html',
   styleUrls: ['./certificados.component.scss']
 })
@@ -19,8 +18,7 @@ export class CertificadosComponent implements OnInit {
   ngOnInit() {
     const user = JSON.parse(localStorage.getItem('user') || '{}');
 
-    // Se mantiene la corrección genérica <any[]> para evitar errores de tipado
-    this.api.get<any[]>('certificados').subscribe((data: any[]) => {
+    this.api.get<any[]>('certificados').subscribe(data => {
       this.certificados = data.filter(c => c.usuario?.id === user.id);
     });
   }

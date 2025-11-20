@@ -1,0 +1,51 @@
+.container {
+  padding: 20px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #0B2A4A; // azul oscuro
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  border-left: 6px solid #1976D2; // azul intenso
+
+  h3 {
+    color: #0B2A4A;
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin: 5px 0;
+    color: #333;
+  }
+}
+
+.btn-redimir {
+  width: 100%;
+  margin-top: 15px;
+  background: #1976D2; // azul
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.btn-redimir:hover {
+  background: #125a9e;
+}

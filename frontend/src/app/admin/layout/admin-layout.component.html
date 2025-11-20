@@ -1,0 +1,21 @@
+<div class="layout">
+
+  <aside class="sidebar">
+    <h3>SIMECC - Admin</h3>
+    <nav>
+      <a routerLink="/admin/dashboard">Dashboard</a>
+      <a routerLink="/admin/usuarios">Usuarios</a>
+      <a routerLink="/admin/multas">Multas</a>
+      <a routerLink="/admin/actividades">Actividades</a>
+      <a routerLink="/admin/redenciones">Redenciones</a>
+          <button class="logout-btn" (click)="logout()">Cerrar sesión</button>    
+    </nav>
+  </aside>
+
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
+
+</div>
+
+

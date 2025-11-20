@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../../../core/services/api.service';
 import { CommonModule } from '@angular/common';
-
+import { ApiService } from '../../../core/services/api.service';
 
 @Component({
   selector: 'app-perfil',
   standalone: true,
+  imports: [CommonModule],
   templateUrl: './perfil.component.html',
   styleUrls: ['./perfil.component.scss']
 })

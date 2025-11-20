@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs'; // 👈 Asegúrate de que Observable está disponible si tu versión de Angular lo requiere explícitamente
+import { Observable } from 'rxjs'; 
 
 @Injectable({ providedIn: 'root' })
 export class ApiService {
@@ -9,7 +9,6 @@ export class ApiService {
 
   constructor(private http: HttpClient) {}
 
-  // CORRECCIÓN CLAVE: Se añade el tipo genérico <T>
   get<T = any>(url: string): Observable<T> {
     return this.http.get<T>(`${this.base}/${url}`);
   }

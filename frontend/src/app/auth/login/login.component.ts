@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -15,8 +16,26 @@ export class LoginComponent {
     contrasenia: ''
   };
 
+  constructor(private router: Router) {}
+
   onLogin() {
-    console.log('Intentando iniciar sesión...', this.credentials);
-    // Aquí luego conectamos al backend /api/usuarios/login
+
+    // LUEGO SE CAMBIA POR EL BACKEND REAL
+    const fakeUser = {
+      documento: this.credentials.documento,
+      rol: this.credentials.documento === 'admin'
+        ? 'ADMIN'
+        : 'INFRACTOR'
+    };
+
+    if (fakeUser.rol === 'ADMIN') {
+      this.router.navigate(['/admin/dashboard']);
+      return;
+    }
+
+    if (fakeUser.rol === 'INFRACTOR') {
+      this.router.navigate(['/infractor/home']);
+      return;
+    }
   }
 }

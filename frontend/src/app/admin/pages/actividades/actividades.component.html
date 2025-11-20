@@ -1,0 +1,32 @@
+<div class="page-container">
+
+  <h2>Gestión de Actividades</h2>
+
+  <div class="card">
+      <table>
+          <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>Nombre</th>
+                  <th>Puntos</th>
+                  <th>Tipo</th>
+                  <th>Acciones</th>
+              </tr>
+          </thead>
+
+          <tbody>
+              <tr *ngFor="let a of actividades">
+                  <td>{{ a.id }}</td>
+                  <td>{{ a.nombre }}</td>
+                  <td>{{ a.puntos }}</td>
+                  <td>{{ a.tipo }}</td>
+                  <td>
+                      <button class="btn edit">Editar</button>
+                      <button class="btn delete">Eliminar</button>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+
+</div>
